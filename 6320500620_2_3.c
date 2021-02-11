@@ -14,20 +14,21 @@ void main()
 
 ///////////////////////////
 
-    int save;
-    for(k=0 ; k<=n ; k++)
+    int max=num[0],min=num[0],mid=num[0];
+    for(i=0 ; i<n ; i++)
     {
-        for(i=0 ; i<n ; i++)
-        {
-            if(num[i]>num[i+1])
-            {
-                save=num[i];
-                num[i]=num[i+1];
-                num[i+1]=save;
-            }
-        }
-
+        if(max<=num[i])
+            max=num[i];
+        else if(min>=num[i])
+            min=num[i];
     }
+    for(i=0 ; i<n ; i++)
+    {
+        if(num[i]!=max && num[i]!=min)
+            mid=num[i];
+    }
+
+
 
 
     int ans[n];
@@ -35,15 +36,15 @@ void main()
     {
         if(c[i]=='A')
         {
-            ans[i]=num[0];
+            ans[i]=min;
         }
         else if(c[i]=='B')
         {
-            ans[i]=num[1];
+            ans[i]=mid;
         }
         else if(c[i]=='C')
         {
-            ans[i]=num[2];
+            ans[i]=max;
         }
     }
     printf("%d %d %d",ans[0],ans[1],ans[2]);
