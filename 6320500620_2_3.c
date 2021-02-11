@@ -6,13 +6,13 @@ void main()
     int n=3;
     int num[n],i,k;
     for(i=0;i<n;i++)
-        scanf("%d",&num[i]);
-
+        scanf("%d ",&num[i]);
+///////////////////////////
     char c[n];
-
-    fflush(stdin);
     for(i=0;i<n;i++)
         scanf("%c",&c[i]);
+
+///////////////////////////
 
     int save;
     for(k=0 ; k<=n ; k++)
