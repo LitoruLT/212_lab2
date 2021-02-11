@@ -22,7 +22,7 @@ void main()
         printf("D+");
     else if(tt <= 54 && tt >= 50)
         printf("D");
-    else
+    else if(tt <= 49 && tt >= 0)
         printf("F");
 }
 
