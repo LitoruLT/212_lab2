@@ -1,16 +1,39 @@
 #include<stdio.h>
-
+void print(int word);
 void main()
 {
     unsigned long long int num;
     scanf("%llu",&num);
-    while(num!=0)
+    unsigned long long int tmp=10,x=num,word,i=0,k=0;
 
-
-
-
-    switch(word)
+    while(x)
     {
+        word=x%tmp;
+        x=x/tmp;
+        i++;
+    }
+    unsigned long long int snum[i];
+    x=num;
+    while(x)
+    {
+        word=x%tmp;
+        x=x/tmp;
+        snum[k]=word;
+        k++;
+    }
+    for( ; k>=0 ;)
+    {
+        print(snum[k]);
+        k=k-1;
+    }
+
+
+
+}
+void print(int word)
+{
+    switch(word)
+        {
         case 0:
             printf("Zero");
             break;
@@ -41,7 +64,5 @@ void main()
         case 9:
             printf("Nine");
             break;
-    }
-
-
+        }
 }
