@@ -16,44 +16,50 @@ void main()
         even=0;
 
     if(num%5==0 && num%10!=0)
-        printf("%c",92);
-
-    switch(even)
     {
-        case 1:
-        if(c>= 65 && c<=73)
-            printf("{@_@}");
-        else if(c>= 74 && c<=82)
-            printf("{*v*}");
-        else if(c>= 83 && c<=90)
-            printf("{x_x}");
+        switch(even)
+        {
+            case 1:
+            if(c>= 65 && c<=73)
+                printf("%c{@_@}/",92);
+            else if(c>= 74 && c<=82)
+                printf("%c{*v*}/",92);
+            else if(c>= 83 && c<=90)
+                printf("%c{x_x}/",92);
+            break;
 
-        break;
-
-        case 0:
-        if(c>= 65 && c<=73)
-            printf("(^_^)");
-        else if(c>= 74 && c<=82)
-            printf("(*o*)");
-        else if(c>= 83 && c<=90)
-            printf("(T_T)");
-        break;
-
+            case 0:
+            if(c>= 65 && c<=73)
+                printf("%c(^_^)/",92);
+            else if(c>= 74 && c<=82)
+                printf("%c(*o*)/",92);
+            else if(c>= 83 && c<=90)
+                printf("%c(T_T)/",92);
+            break;
+        }
     }
-    if(num%5==0 && num%10!=0)
-        printf("/");
+    else
+    {
+        switch(even)
+        {
+            case 1:
+            if(c>= 65 && c<=73)
+                printf("{@_@}");
+            else if(c>= 74 && c<=82)
+                printf("{*v*}");
+            else if(c>= 83 && c<=90)
+                printf("{x_x}");
+            break;
 
+            case 0:
+            if(c>= 65 && c<=73)
+                printf("(^_^)");
+            else if(c>= 74 && c<=82)
+                printf("(*o*)");
+            else if(c>= 83 && c<=90)
+                printf("(T_T)");
+            break;
 
-
-    //A=65
-    //I=73
-
-    //J=74
-    //R=82
-
-    //S=83
-    //Z=90
-
-
-
+        }
+    }
 }
