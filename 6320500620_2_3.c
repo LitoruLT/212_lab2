@@ -9,9 +9,7 @@ void main()
         scanf("%d ",&num[i]);
 ///////////////////////////
     char c[n];
-    for(i=0;i<n;i++)
-        scanf("%c",&c[i]);
-
+    scanf("%[^\n]%*c",&c);
 ///////////////////////////
 
     int save;
