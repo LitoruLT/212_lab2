@@ -4,7 +4,8 @@ void main()
 {
     unsigned long long int num;
     scanf("%llu",&num);
-    unsigned long long int tmp=10,x=num,word,i=0,k=0;
+    unsigned long long int tmp=10,x=num,word;
+    int i=0,k=0;
 
     while(x)
     {
@@ -12,19 +13,25 @@ void main()
         x=x/tmp;
         i++;
     }
+    i=i-1;
     unsigned long long int snum[i];
     x=num;
-    while(x)
+    for( ; i>=0 ;)
     {
         word=x%tmp;
         x=x/tmp;
         snum[k]=word;
+        i--;
         k++;
     }
+    int sk=k;
     for( ; k>=0 ;)
     {
         print(snum[k]);
+        if(k>0 && k<sk)
+            printf("-");
         k=k-1;
+
     }
 
 
