@@ -7,25 +7,13 @@ void main()
     int num[n],i,k;
     for(i=0;i<n;i++)
         scanf("%d",&num[i]);
-////////////////////////////////////////////
 
-    char c[n],unc;
+    char c[n];
 
     fflush(stdin);
-    //scanf("%c",&unc);
-
     for(i=0;i<n;i++)
         scanf("%c",&c[i]);
 
-    //printf("%c",unc);
-    //for(i=0 ; i<n ; i++)
-    //{
-    //    printf("\nc[%d] = %c\n",i,c[i]);
-    //}
-
-
-
-////////////////////////////////////////////
     int save;
     for(k=0 ; k<=n ; k++)
     {
@@ -40,9 +28,6 @@ void main()
         }
 
     }
-
-
-    //num[0]=A,num[1]=B,num[2]=C
 
 
     for(i=0 ; i<n ; i++)
@@ -60,7 +45,7 @@ void main()
             printf("%d",num[2]);
         }
 
-        if(i < n)
+        if(i < n-1)
             printf(" ");
     }
 
