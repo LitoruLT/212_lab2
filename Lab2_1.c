@@ -8,7 +8,7 @@ void main()
     scanf("%f",&c);
 
     int tt=a+b+c;
-    if(tt >= 80)
+    if(tt <= 100 && tt >= 80)
         printf("A");
     else if(tt <= 79 && tt >= 75)
         printf("B+");
