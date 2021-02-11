@@ -9,7 +9,9 @@ void main()
         scanf("%d ",&num[i]);
 ///////////////////////////
     char c[n];
-    scanf("%[^\n]%*c",&c);
+    for(i=0;i<n;i++)
+        scanf("%c",&c[i]);
+
 ///////////////////////////
 
     int save;
@@ -28,24 +30,24 @@ void main()
     }
 
 
+    int ans[n];
     for(i=0 ; i<n ; i++)
     {
         if(c[i]=='A')
         {
-            printf("%d",num[0]);
+            ans[i]=num[0];
         }
         else if(c[i]=='B')
         {
-            printf("%d",num[1]);
+            ans[i]=num[1];
         }
         else if(c[i]=='C')
         {
-            printf("%d",num[2]);
+            ans[i]=num[2];
         }
-
-        if(i < n-1)
-            printf(" ");
     }
+    printf("%d %d %d",ans[0],ans[1],ans[2]);
+
 
 
 }

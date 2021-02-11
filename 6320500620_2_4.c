@@ -2,27 +2,58 @@
 
 void main()
 {
-    char pro;
-    scanf("%c",&pro);
-    float time,addt;
-    scanf("%f",&time);
-    float min=(int)time,sec=(time-(int)time)*100;
-    //printf("min=%f ,sec=%f\n",min,sec);
+    char c;
+    scanf("%c",&c);
+    c=(int)c;
 
-    switch(pro)
+    int num;
+    scanf("%d",&num);
+
+    int even;
+    if(num%2==0)
+        even=1;
+    else
+        even=0;
+
+    if(num%5==0 && num%10!=0)
+        printf("%c",92);
+
+    switch(even)
     {
-        case 'A':
-            if(min>200.0)
-                addt=min-200.0;
-            printf("%.2f",(addt*3.0)+199.0+(sec/60*3.0) );
-            break;
+        case 1:
+        if(c>= 65 && c<=73)
+            printf("{@_@}");
+        else if(c>= 74 && c<=82)
+            printf("{*v*}");
+        else if(c>= 83 && c<=90)
+            printf("{x_x}");
 
-        case 'B':
-            if(min>400.0)
-                addt=min-400.0;
-            printf("%.2f",(addt*2.0)+299.0+(sec/60*2.0) );
-            break;
+        break;
+
+        case 0:
+        if(c>= 65 && c<=73)
+            printf("(^_^)");
+        else if(c>= 74 && c<=82)
+            printf("(*o*)");
+        else if(c>= 83 && c<=90)
+            printf("(T_T)");
+        break;
+
     }
+    if(num%5==0 && num%10!=0)
+        printf("/");
+
+
+
+    //A=65
+    //I=73
+
+    //J=74
+    //R=82
+
+    //S=83
+    //Z=90
+
 
 
 }
